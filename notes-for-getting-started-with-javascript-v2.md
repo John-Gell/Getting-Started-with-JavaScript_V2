@@ -38,4 +38,34 @@ Having a solid hold on this is important to prevent bugs caused by misusing type
     -   Objects
     -   Classes
 -   Non-Primitive types work by storing a pointer to a memory address. This means if you set a new variable equal to an existing one, the new varialbe dosen't contain the information that you are looking for, it contains the pointer. 
+
     -   this means any changes to either variable will be reflected in the other. Loosley described, they are tied together in a web. 
+
+    # Versions of For Loops
+
+    Apparently there are more than one type of for loops. 
+
+    ### The Classic
+
+    -   this is just a traditional for loop, use the for keyword followed by a counting variable usually `i`, and then a logical statement to determine how many times to loop. 
+
+    ### For...of loop
+
+    -   this loops through property values
+    -   syntax: 
+        ```js
+        for(foo of objectToBeRead){
+        	statements
+        }
+        ```
+    -   it is important to note that `foo` is a nonspecific variable that is used similarly to how a counting variable would be used e.g. `i`
+
+    ### For...in loop
+
+    -   this loops through property names 
+    -   for..in loop goes through inumerable properties while for..of loops through itterable objects.
+        ```js
+        for(foo in objectToBeRead){
+        	statements
+        }
+        ```
