@@ -224,9 +224,83 @@ ask("What is closure?"); //"What is closure?"
 
 -   In this example, the function waitASec "has closure" over the function ask. I think this means that the ask function will not close unitl the setTimeout does. Needs confirmation. 
 
-# General Principals
+## This/Prototypes
 
--   Always keep things as narrowly hidden as possible. This includes things like using Block Scoping (defined above) whithin a function to prevent that variable from spilling over into the rest of the function or elsewhere in the code. 
+-   this 
+-   Prototypes
+-   class {}
 
-\-**Private Variables** are what the variables hidden within block scoping are called. 
-\-A way to indicate a **private variable** is by prefixing it with an underscore like this "\_variableName"
+### This
+
+-   the this keyword is 'flexible' as opposed to 'lexical' like the rest of the language 
+    -   using this allows for functions to be reuseable in various contexts. 
+
+### Prototypes
+
+-   uses the keyword `new` which creates a prototype 
+-   is a way to apply repeating values to multiple objects by pointing to one chunk of code. For example: 
+
+```JS
+function Particle() {
+    this.x = 100;
+    this.y = 99;
+    // the above produces the properties that are being applied to each individual item. 
+    //one could now use the same function for each particle produced later but this is confusing and non modular. 
+Particle.prototype.show = function() {
+    point(this.x, this.y);
+}
+    
+var p;
+
+var v;
+    
+function setup() {
+    createCanvas (600,300);
+    p = new Particle();
+    
+```
+
+-   that example may not be the most useful. Howerver, here is another way that I look at prototypes. 
+    -   prototypes are a way to tell the program how to handle various methods being applied to a specific object. 
+        -   For example: in JS, there is an inbuilt prototype array. In the console, logging the variable produces a value and a dropdown. In that dropdown there are the values entered into the array along with a property that looks like `__proto__` this dropdown lists all of the methods that can be applied to this specific object. 
+            -   This appears to be a weak understanding of the full concept but may be useful. 
+-   It appears that the `class` keyword will cover all of this automatically. 
+      
+
+### Class
+
+-   This is layred ontop of the prototype style 
+    -   much simpler and 'attractive'
+-   Class allows you to both create the prototype and define the methods associated with it. 
+-   Class starts with a self named keyword and looks like this:
+
+```JS
+class className {
+    constructor(valueToBePassedIn1,valueToBePassedIn2) { //constructyor is a keyword here that creates an 
+//annonymous function to define a property of the
+//targeted object.
+        this.newPropertyName1 = valueToBePassedIn1;
+        this.newPropertyName2 = valueToBePassedIn2;
+    }
+	newMethodName(valueToBePassed3) {
+        //the substance of the method
+    }
+}
+    
+ 
+ 
+ 
+# General Principals 
+- Always keep things as narrowly hidden as possible. This includes things like using Block Scoping (defined above) whithin a function to prevent that variable from spilling over into the rest of the function or elsewhere in the code. 
+
+-**Private Variables** are what the variables hidden within block scoping are called. 
+-A way to indicate a **private variable** is by prefixing it with an underscore like this "_variableName"
+
+  
+
+  
+    
+    
+  
+    
+```
