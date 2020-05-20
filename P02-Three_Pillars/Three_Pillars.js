@@ -10,13 +10,16 @@ class Bookshelf{
         //   bookName.push(bookName)
         console.log('the book was added', bookName);
         this.favoriteBooks.push(bookName);
+        console.log(this.favoriteBooks);
         }
       }
     printFavoriteBooks(){
+        let listNo=1;
     console.log('Your favorite books are:')
-    for (let i = 0; i< this.length;i++){
-        console.log((i+1)+ ". " + this.favvoriteBooks[i]);
-    }
+        for(let favoriteBook of Bookshelf1.favoriteBooks) {
+            console.log(String(listNo)+". "+favoriteBook);
+            listNo++;
+        }
     }
       
 }
@@ -26,7 +29,6 @@ Bookshelf1.addFavoriteBook('The Subpar Gatsby');
 Bookshelf1.addFavoriteBook('The Great gatsby');
 Bookshelf1.addFavoriteBook('The Windup Girl');
 Bookshelf1.addFavoriteBook('The Great Gusty Gunter')
-Bookshelf1.addFavoriteBook("Harry Potter and the Sorcer's Stone")
+Bookshelf1.addFavoriteBook("Harry Potter and the Sorcerer's Stone")
 
 Bookshelf1.printFavoriteBooks();
-
