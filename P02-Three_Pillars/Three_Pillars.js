@@ -8,9 +8,7 @@ class Bookshelf{
         }
         else {
         //   bookName.push(bookName)
-        console.log('the book was added', bookName);
         this.favoriteBooks.push(bookName);
-        console.log(this.favoriteBooks);
         }
       }
     printFavoriteBooks(){
