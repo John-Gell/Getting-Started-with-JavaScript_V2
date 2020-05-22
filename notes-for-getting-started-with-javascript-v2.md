@@ -7,7 +7,7 @@ tags: ""
 Types refers to the informaiton included in a variable. 
 Having a solid hold on this is important to prevent bugs caused by misusing types. 
 
-### Primitive Types
+## Primitive Types
 
 -   these seem to be the most confusing
 -   I used to think of variables this way, the code is executed line by line and does not look back at previous assignments for information. 
@@ -30,7 +30,7 @@ Having a solid hold on this is important to prevent bugs caused by misusing type
             console.log(b);    //result: 10
             ```
 
-### Non-Primitive Types
+## Non-Primitive Types
 
 -   To me, these feel more like a web, the changes in one location have an effect elsewhere. 
 -   Non-Primitive Types include
@@ -38,8 +38,24 @@ Having a solid hold on this is important to prevent bugs caused by misusing type
     -   Objects
     -   Classes
 -   Non-Primitive types work by storing a pointer to a memory address. This means if you set a new variable equal to an existing one, the new varialbe dosen't contain the information that you are looking for, it contains the pointer. 
-
     -   this means any changes to either variable will be reflected in the other. Loosley described, they are tied together in a web. 
+
+## How I think about Primitive vs. non-Primitive types:
+
+-   Imagine a library, in the front entry of the library, The Librarian sits at a desk and is working with you to complete your program. The libriarian is equivilant to the command line or program that you are using to execute the code. Behind the librarian is large shelf full of bins, this is the 'STACK' memory. Off to the side, there is a series of book shelves. They all have an address that can be used to quickly find the shelf and retreive the information there. This is like the 'HEAP' memory.
+
+### Primitive Variables
+
+-   When you write a Primitive variable the librarian writes that information on an index card and puts it into a drawer and then relables that drawer to match the name of your new Primative variable. So now, there is a drawer named by the varialbe containing the infomation assigned to that variable. 
+-   In the case when a Primitive variable is assigned equal to another Primitive variable:
+    -   Given existing Primitive variable A, and new Primitive variable B, the Librarian takes the index card out of the drawer of the existing Primitive variable A, copies that index card and then places one copy into the drawer labled A and the second copy into a new drawer that gets labled B. From here on out, the variables are not connected to eachother beacause they are two separate drawer. 
+
+### Non-Primitve Variables
+
+-   For the case of the non-Primitve value:
+
+    -   Let's say the new non-Primitive variable is named C. The Librarian still takes that information, but it dosen't fit into the small drawer on the shelf so instead, the librarian writes an address for one of the book shelves in the 'HEAP' onto an index card and places the card in the 'STACK' drawer that gets labled C. 
+        -   This means that any variable set equivilant to this non-Primitive variable will now also contain an address for the bookshelf and any changes made to the information on the bookshelf will effect any other drawer that points to that same address. 
 
     # Versions of For Loops
 
@@ -129,70 +145,78 @@ JS does not have fixed type variables, These are the types that a variable can b
         console.log(foo+"")     //String contianing contents of foo, even if foo is typeOf Number. 
         ```
 
-
-````
-
 ### Falsy and Truthy
+
 These are variables, when converted to Booleans will become false or true respectivley. 
-- Falsy values
-  - "" eg. empty string
-  - 0, -0 
-  - null
-  - NaN
-  - false
-  - undefined
-- Truthy Values
-  - This is prettymuch anything else
-    - "foo"
-    - 23
-    - an object
-    - an array 
-    - true
-    - function(){..}
-    - ......
-### Checking equivilancy 
-- The typical understanding on double vs tripple equals says
-  - == checks value (loose)
-  - === checks value (strict)
-- the actaul definition says
-  - == allows coercion (types different) 
-  - === disallows coercion (types same)
+
+-   Falsy values
+    -   "" eg. empty string
+    -   0, -0 
+    -   null
+    -   NaN
+    -   false
+    -   undefined
+-   Truthy Values
+    -   This is prettymuch anything else
+        -   "foo"
+        -   23
+        -   an object
+        -   an array 
+        -   true
+        -   function(){..}
+        -   ......
+
+### Checking equivilancy
+
+-   The typical understanding on double vs tripple equals says
+    -   == checks value (loose)
+    -   === checks value (strict)
+-   the actaul definition says
+    -   == allows coercion (types different) 
+    -   === disallows coercion (types same)
 
 ## Types/Closures
-- Nested Scope
-- Closure 
+
+-   Nested Scope
+-   Closure 
+
 ### Scope
+
 Basically, where does JS look for things. 
 
 ### Unfefined vs Undeclared
-- These are different
-  - Undefined has been declared but has no value
-  - Undeclared means it has never been typed before 
+
+-   These are different
+    -   Undefined has been declared but has no value
+    -   Undeclared means it has never been typed before 
 
 ### Function Expressions
-- This is what happens when a function is assigned to a variable. 
-	- there are two types of function expressions. 
-      - anonnymous function expression
-        - This is the case when a function is declared and immediatley followed by a set of parens like this: `function(){..}`
-      - Named function expression
-        - as it is named
-        
-- Arrow Function Expressions
-  - This is a more "terse" version of a function expression. It makes the code mroe opaque. 
-  
-- IIFE's 
-  - Immediatley Invoked Function Expression 
-  ```JS
-  var teacher = "Kyle";
-  
-  (function anotherTeacher() {
-      var teacher = "Suzy";
-      console.log(teacher);        // Suzy
-  } ) ();
-  console.log(teacher);            // Kyle
-````
 
--   this can be used to collect a set of variables to protect them from encroaching on the outer scope. 
+-   This is what happens when a function is assigned to a variable. 
+    -   There are two types of function expressions. 
+        -   Anonymous function expression
+            -   This is the case when a function is declared and immediatley followed by a set of parens like this: `function(){..}`
+        -   Named function expression
+            -   The same but with a name. 
+
+-   Arrow Function Expressions
+    -   This is a more "terse" version of a function expression. It makes the code more opaque. 
+
+-   IIFE's 
+
+    -   Immediatley Invoked Function Expression 
+
+    ```JS
+    var teacher = "Kyle";
+
+    (function anotherTeacher() {
+        var teacher = "Suzy";
+        console.log(teacher);        // Suzy
+    } ) ();
+    console.log(teacher);            // Kyle
+    ```
+
+    -   this can be used to collect a set of variables to protect them from encroaching on the outer scope. 
 
 -   Block Scoping 
 
@@ -287,20 +311,15 @@ class className {
     }
 }
     
- 
- 
- 
-# General Principals 
-- Always keep things as narrowly hidden as possible. This includes things like using Block Scoping (defined above) whithin a function to prevent that variable from spilling over into the rest of the function or elsewhere in the code. 
-
--**Private Variables** are what the variables hidden within block scoping are called. 
--A way to indicate a **private variable** is by prefixing it with an underscore like this "_variableName"
-
-  
-
-  
-    
-    
-  
-    
 ```
+
+# General Principals
+
+-   Always keep things as narrowly hidden as possible. This includes things like using Block Scoping (defined above) whithin a function to prevent that variable from spilling over into the rest of the function or elsewhere in the code. 
+
+\-**Private Variables** are what the variables hidden within block scoping are called. 
+\-A way to indicate a **private variable** is by prefixing it with an underscore like this "\_variableName"
+
+# Wrapup
+
+This was a useful class, I enjoyed the materials and would like to come back to this down the road to see how I feel about the informaiton that is in it. I need a lot more work in JS before I can be actually proficient on my own. Keep taking diligent notes and readng them before dropping back into the classes. 

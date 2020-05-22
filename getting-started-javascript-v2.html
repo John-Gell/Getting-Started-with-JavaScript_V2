@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Getting Started with JavaScript, v2 | Frontend Masters</title>
+    <style>
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+			font-size: 16px;
+			margin: 0;
+			padding: 30px;
+			background-color: #111;
+			color: #fff; 
+		}
+		
+		h2 {
+				background-color: #333;
+				color: #ccc;
+				padding: 10px;
+		}
+		h3 {
+			border-bottom: 1px solid #333;
+			padding-bottom: 6px;
+		}
+		
+		td {
+		 padding: 3px 0;
+					}
+					td a {
+							color: #ccc;
+							text-decoration: none;
+							padding-right: 20px;
+					}
+					td p {
+							display: inline;
+							margin: 0;
+							padding: 0px;
+					}
+					td p a {
+							color: #5baec0;
+							text-decoration: underline;
+					}
+					h1 a {
+							color: #5baec0;
+							text-decoration: none;
+					}
+					h3 a {
+							color: #5baec0;
+							text-decoration: none;
+					}
+					p a {
+							padding: 0px;
+					}
+					code {
+							background-color: #1e3134;
+							padding: 3px;
+			}
+    </style>
+  </head>
+  <body>
+    <h1><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/" target="_blank">Getting Started with JavaScript, v2</a></h1>
+    <h2>Introduction</h2>
+    <h3><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/introduction" target="_blank">Introduction</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/introduction?t=10" target="_blank">00:00:10</a></td><td><p>Here&rsquo;s a link to <a href="https://static.frontendmasters.com/resources/2019-05-08-getting-into-javascript/getting-into-javascript.pdf">the slides</a></p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/introduction?t=26" target="_blank">00:00:26</a></td><td><p>Here&rsquo;s Kyle on <a href="mailto:getify@gmail.com">Gmail</a>, <a href="https://twitter.com/getify">Twitter</a>, and <a href="https://github.com/getify">GitHub</a></p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/introduction?t=84" target="_blank">00:01:24</a></td><td><p>Here&rsquo;s a link to <a href="https://github.com/getify/you-dont-know-js">read the book on GitHub</a> and here&rsquo;s a link to <a href="https://www.ebooks.com/en-us/1993212/you-don-t-know-js-up-going/kyle-simpson/">purchase the book</a></p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/introduction?t=283" target="_blank">00:04:43</a></td><td><p>Here&rsquo;s a link to <a href="https://runjs.dev/">RunJS</a></p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/introduction?t=289" target="_blank">00:04:49</a></td><td><p>Here are links to learn about <a href="https://developers.google.com/web/tools/chrome-devtools/">Chrome&rsquo;s developer tools</a> and <a href="https://nodejs.org/en/">Node</a></p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/course-overview" target="_blank">Course Overview</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/course-overview?t=77" target="_blank">00:01:17</a></td><td><p>three pillars of JS:</p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/course-overview?t=90" target="_blank">00:01:30</a></td><td><ol>
+<li>types/Coercion</li>
+<li>scope/Closures</li>
+<li>this/Prototypes</li>
+</ol>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/course-overview?t=116" target="_blank">00:01:56</a></td><td><p>Before continuing, make sure to watch <a href="https://frontendmasters.com/teachers/kyle-simpson/code-is-for-humans/">Code is for Humans</a></p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/course-overview?t=166" target="_blank">00:02:46</a></td><td><p>Programming primer in JS</p>
+</td></tr>
+    </table>
+    <h2>Programming Primer</h2>
+    <h3><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/values" target="_blank">Values</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/values?t=10" target="_blank">00:00:10</a></td><td><p>Kyle is on page 8 of <a href="https://static.frontendmasters.com/resources/2019-05-08-getting-into-javascript/getting-into-javascript.pdf">the slides</a></p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/values?t=63" target="_blank">00:01:03</a></td><td><p>you can use both double and single quotes in JS</p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/values?t=100" target="_blank">00:01:40</a></td><td><p>Correction: the name of the mathematician is <a href="https://en.wikipedia.org/wiki/George_Boole">George Boole</a></p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/values?t=224" target="_blank">00:03:44</a></td><td><p>Here&rsquo;s a link to purchase <a href="https://www.barnesandnoble.com/w/a-is-for-array-brandon-j-hansen/1115440566">A is for Array</a></p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/operations" target="_blank">Operations</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/types" target="_blank">Types</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/types?t=32" target="_blank">00:00:32</a></td><td><p>Here&rsquo;s the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof">MDN documentation on typeof</a></p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/variables" target="_blank">Variables</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/expressions-vs-statements" target="_blank">Expressions vs Statements</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/expressions-vs-statements?t=139" target="_blank">00:02:19</a></td><td><p>primitive values are called literals (this is like a number or a string)</p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/if-else" target="_blank">If & Else</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/loops" target="_blank">Loops</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/functions" target="_blank">Functions</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/programming-primer-exercise" target="_blank">Programming Primer Exercise</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/programming-primer-exercise?t=11" target="_blank">00:00:11</a></td><td><p>Here&rsquo;s a link to download a <a href="http://static.frontendmasters.com/resources/2019-05-08-getting-into-javascript/getting-into-javascript.zip">zip file of the exercises</a></p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/programming-primer-exercise?t=134" target="_blank">00:02:14</a></td><td><p>Note: The path to the exercise file is primer &gt; ex.js and the path to the solution is primer &gt; ex.fixed.js</p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/programming-primer-exercise?t=155" target="_blank">00:02:35</a></td><td><p>Here&rsquo;s a link to <a href="https://runjs.dev/">RunJS</a></p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/programming-primer-solution" target="_blank">Programming Primer Solution</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/programming-primer-solution?t=114" target="_blank">00:01:54</a></td><td><p>Here&rsquo;s the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes">MDN documentation on includes</a></p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/programming-primer-solution?t=222" target="_blank">00:03:42</a></td><td><p>Here&rsquo;s the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push">MDN documentation on push</a></p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/programming-primer-solution?t=368" target="_blank">00:06:08</a></td><td><p>Here&rsquo;s the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">MDN documentation on template strings</a></p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/programming-primer-summary" target="_blank">Programming Primer Summary</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/programming-primer-summary?t=16" target="_blank">00:00:16</a></td><td><p>Here&rsquo;s a link to the <a href="https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/up%20&amp;%20going/README.md#you-dont-know-js-up--going">first edition</a> and <a href="https://github.com/getify/You-Dont-Know-JS/tree/2nd-ed/get-started">second edition</a> on GitHub</p>
+</td></tr>
+    </table>
+    <h2>Types & Coercion</h2>
+    <h3><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/primitive-types" target="_blank">Primitive Types</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/primitive-types?t=10" target="_blank">00:00:10</a></td><td><p>Kyle is on page 29 of <a href="https://static.frontendmasters.com/resources/2019-05-08-getting-into-javascript/getting-into-javascript.pdf">the slides</a></p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/nan" target="_blank">NaN</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/nan?t=73" target="_blank">00:01:13</a></td><td><p>Here&rsquo;s the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN">MDN documentation on isNaN</a></p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/new" target="_blank">new</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/coercion" target="_blank">Coercion</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/booleans" target="_blank">Booleans</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/coercion-best-practices" target="_blank">Coercion Best Practices</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/equality" target="_blank">Equality</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/types-summary" target="_blank">Types Summary</a></h3>
+    <h2>Scope</h2>
+    <h3><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/scope" target="_blank">Scope</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/scope?t=10" target="_blank">00:00:10</a></td><td><p>Kyle is on page 64 of <a href="https://static.frontendmasters.com/resources/2019-05-08-getting-into-javascript/getting-into-javascript.pdf">the slides</a></p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/scope?t=22" target="_blank">00:00:22</a></td><td><p>Here&rsquo;s a link to <a href="https://frontendmasters.com/courses/deep-javascript-v3/">Deep JS Foundations</a></p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/undefined-vs-undeclared" target="_blank">Undefined vs Undeclared</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/function-expressions" target="_blank">Function Expressions</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/function-expressions?t=148" target="_blank">00:02:28</a></td><td><p>Here&rsquo;s the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">MDN documentation on arrow functions</a></p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/iffes" target="_blank">IFFEs</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/iffes?t=110" target="_blank">00:01:50</a></td><td><p>Here&rsquo;s a link to the <a href="http://benalman.com/news/2010/11/immediately-invoked-function-expression/">blog post</a></p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/block-scoping-with-let" target="_blank">Block Scoping with let</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/closure" target="_blank">Closure</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/closure?t=293" target="_blank">00:04:53</a></td><td><p>Here&rsquo;s a link to read <a href="https://github.com/getify/You-Dont-Know-JS/tree/2nd-ed/scope-closures">YDKJS: Scope and Closures</a></p>
+</td></tr>
+    </table>
+    <h2>this & Prototypes</h2>
+    <h3><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/this" target="_blank">this</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/this?t=10" target="_blank">00:00:10</a></td><td><p>Kyle is on page 83 of <a href="https://static.frontendmasters.com/resources/2019-05-08-getting-into-javascript/getting-into-javascript.pdf">the slides</a></p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/prototypes" target="_blank">Prototypes</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/class" target="_blank">class</a></h3>
+    <h2>Practice</h2>
+    <h3><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/three-pillars-of-js-exercise" target="_blank">Three Pillars of JS Exercise</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/three-pillars-of-js-exercise?t=15" target="_blank">00:00:15</a></td><td><p>Here&rsquo;s a link to download a <a href="http://static.frontendmasters.com/resources/2019-05-08-getting-into-javascript/getting-into-javascript.zip">zip file of the exercises</a></p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/three-pillars-of-js-exercise?t=49" target="_blank">00:00:49</a></td><td><p>Note: The path to the exercise file is three-pillars &gt; ex.js and the path to the solution is three-pillars &gt; ex.fixed.js</p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/three-pillars-of-js-solution" target="_blank">Three Pillars of JS Solution</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/pillars-of-js-summary" target="_blank">Pillars of JS Summary</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/pillars-of-js-summary?t=64" target="_blank">00:01:04</a></td><td><p>Here&rsquo;s a link to read the <a href="https://github.com/getify/You-Dont-Know-JS">You Don&rsquo;t Know JS series</a></p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/pillars-of-js-summary?t=136" target="_blank">00:02:16</a></td><td><p>Here&rsquo;s a link to the <a href="https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/up%20&amp;%20going/README.md#you-dont-know-js-up--going">first edition</a> and <a href="https://github.com/getify/You-Dont-Know-JS/tree/2nd-ed/get-started">second edition</a> on GitHub</p>
+</td></tr>
+    </table>
+    <h2>Wrapping Up</h2>
+    <h3><a href="https://frontendmasters.com/courses/getting-started-javascript-v2/wrapping-up" target="_blank">Wrapping Up</a></h3>
+    </body>
+</html>
