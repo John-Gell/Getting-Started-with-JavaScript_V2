@@ -22,8 +22,8 @@ function loadBooks(bookshelf) {
 		for (let bookName of bookNames) {
 			bookshelf.addFavoriteBook(bookName);
 		}
-		bookshelf.printFavoriteBooks();
 	});
+	bookshelf.printFavoriteBooks();
 }
 
 var BOOK_API = "https://some.url/api";
